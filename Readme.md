@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Инна Кришталь](https://up.htmlacademy.ru/adaptive/13/user/43485).
-* Наставник: `Неизвестно`.
+* Наставник: [Сам себе наставник].
 
 ---
 
