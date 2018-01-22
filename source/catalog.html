@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img class="page-header__logo-image" src="img/mishka-logo-mobile.svg" width="226" height="30" alt="Интернет магазин «Мишка»">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a>Каталог товаров</a>
+          </li>
+          <li class="site-list__item">
+            <a href="photo.html">Вязание на заказ</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Поиск по сайту</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Корзина: <span>пока пуста</span></a>
+          </li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a class="user-list__login" href="login.html">Войти</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <h1 class="visually-hidden">Магазин товаров ручной работы</h1>
+
+    <section class="page-title">
+      <h2>Каталог товаров</h2>
+    </section>
+
+    <section class="catalog">
+      <ul class="catalog__list">
+        <li class="catalog__item product">
+          <div class="product__img">
+            <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик" />
+          </div>
+          <div class="product__wrapper">
+            <h3 class="product__title">
+            Зайчик-попрыгайчик
+            </h3>
+            <p class="product__desc">
+              Рост 30 см, вес 200 г
+            </p>
+            <p class="product__price clearfix">
+              1200 руб.
+              <a class="product__order">В корзину</a>
+            </p>
+          </div>
+        </li>
+        <li class="catalog__item product">
+          <div class="product__img">
+            <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья" />
+          </div>
+          <div class="product__wrapper">
+            <h3 class="product__title">
+            Корзинка для белья
+            </h3>
+            <p class="product__desc">
+              Диаметр 15 см, высота 10 см
+            </p>
+            <p class="product__price clearfix">
+              690 руб.
+              <a class="product__order">В корзину</a>
+            </p>
+          </div>
+        </li>
+        <li class="catalog__item product">
+          <div class="product__img">
+            <img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья" />
+          </div>
+          <div class="product__wrapper">
+            <h3 class="product__title">
+            Большая корзина для игрушек
+            </h3>
+            <p class="product__desc">
+              Диаметр 30 см, высота 30 см
+            </p>
+            <p class="product__price">
+              690 руб.
+              <a class="product__order">В корзину</a>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="process">
+      <h3 class="process__title">
+        Процесс производства
+      </h3>
+      <div class="process__video">
+        <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="Корзинка для белья" />
+      </div>
+      <p class="process__text">
+        По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+      </p>
+      <a class="process__order btn">Сделать заказ</a>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <ul class="page-footer__social social-list">
+      <li class="social-list__item  social-link  social-link--in">
+        <a class="" href="#">Мы в Инстаграме</a>
+      </li>
+      <li class="social-list__item  social-link  social-link--fb">
+        <a class=" " href="#">Мы в Файсбуке</a>
+      </li>
+      <li class="social-list__item  social-link  social-link--tw">
+        <a class="" href="#">Мы в Твиттере</a>
+      </li>
+    </ul>
+    <p class="page-footer__copyright">
+      Разработано
+      <a class="page-footer__copyright-link" href="#">HTML Academy</a>
+    </p>
+  </footer>
+
+</body>
+
+</html>
