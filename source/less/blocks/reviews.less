@@ -23,3 +23,40 @@
   font-size: 17px;
   line-height: 24px;
 }
+@media (min-width: @tablet-width) {
+  .reviews {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .reviews__title {
+    width: 50%;
+    order: 1;
+  }
+  .reviews__write {
+    width: 50%;
+    order: 2;
+  }
+  .reviews__wrapper {
+    width: 100%;
+    order: 3;
+    position: relative;
+  }
+  .reviews__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .reviews__autor-wrapper {
+    width: 50%;
+  }
+  .reviews__btn-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+  }
+}
+@media (min-width: @desktop-width) {
+
+}

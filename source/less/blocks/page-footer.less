@@ -7,3 +7,19 @@
   line-height: 18px;
   font-weight: bold;
 }
+.page-footer__logo {
+  display: none;
+}
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .page-footer__logo {
+    display: block;
+  }
+}
+@media (min-width: @desktop-width) {
+
+}

@@ -16,3 +16,35 @@
   line-height: 20px;
   font-weight: bold;
 }
+@media (min-width: @tablet-width) {
+  .about-us__benefits {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about-us__benefit {
+    width: 50%;
+
+    &--eco {
+      order: 1;
+      }
+    &--price {
+      order: 3;
+      }
+    &--like {
+      order: 5;
+      }
+    &--handmade {
+      order: 2;
+    }
+    &--manufacturer{
+      order: 4;
+    }
+    &--packing {
+      order: 6;
+    }
+  }
+
+}
+@media (min-width: @desktop-width) {
+
+}

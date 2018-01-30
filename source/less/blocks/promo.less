@@ -30,3 +30,50 @@
   font-weight: bold;
   text-align: center;
 }
+@media (min-width: @tablet-width) {
+  .promo {
+    display: flex;
+    // flex-direction: row;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+  }
+  .promo__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .promo__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    // flex-wrap: wrap;
+    // justify-content: flex-start;
+    // max-height: 410px;
+  }
+  .promo__desc {
+    width: 50%;
+  }
+  .promo__table {
+    width: 50%;
+  }
+  .promo__photo {
+    width: 50%;
+    // order: 1;
+  }
+  .promo__price {
+    width: 50%;
+    margin-top: -100px;
+  }
+}
+@media (min-width: @desktop-width) {
+ .promo__header {
+   justify-content: flex-start;
+   z-index: 1;
+ }
+ .promo__title {
+   order: 1;
+ }
+ .promo__photo {
+   margin-top: -80px;
+ }
+}

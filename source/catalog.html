@@ -5,37 +5,52 @@
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
 </head>
 
 <body>
 
   <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="226" height="30" alt="Интернет магазин «Мишка»">
-    </a>
+
     <nav class="main-nav">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="226" height="30" alt="Интернет магазин «Мишка»">
+      </a>
       <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
+      <!-- <div class="main-nav__wrapper"> -->
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
+          <li class="main-nav__item site-list__item site-list__item--active">
             <a>Каталог товаров</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item site-list__item">
             <a href="photo.html">Вязание на заказ</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Поиск по сайту</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">Корзина: <span>пока пуста</span></a>
           </li>
         </ul>
         <ul class="main-nav__list user-list">
-          <li class="user-list__item">
-            <a class="user-list__login" href="login.html">Войти</a>
+          <li class="main-nav__item user-list__item">
+            <a href="form.html">Поиск по сайту</a>
+          </li>
+          <li class="main-nav__item user-list__item">
+            <a href="#">Корзина: <span>пока пуста</span></a>
           </li>
         </ul>
-      </div>
+        <ul class="main-nav__list promo-nav">
+          <li class="main-nav__item promo-nav__item">
+            <a href="#">Новые поступления</a>
+          </li>
+          <li class="main-nav__item promo-nav__item">
+            <a href="#">Распродажа</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list delivery">
+          <li class="main-nav__item main-nav__item--no-link">
+            <p>
+              Бесплатная доставка по России
+            </p>
+          </li>
+        </ul>
+      <!-- </div> -->
     </nav>
   </header>
 
@@ -119,6 +134,9 @@
   </main>
 
   <footer class="page-footer">
+    <a class="page-footer__logo">
+      <img class="page-footer__logo-image" src="img/logo-mobile.svg" width="226" height="30" alt="Интернет магазин «Мишка»">
+    </a>
     <ul class="page-footer__social social-list">
       <li class="social-list__item  social-link  social-link--in">
         <a class="" href="#">Мы в Инстаграме</a>
