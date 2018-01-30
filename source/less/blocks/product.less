@@ -19,3 +19,31 @@
 .product__price {
   font-weight: bold;
 }
+@media (min-width: @tablet-width) {
+ .product {
+   display: flex;
+   flex-direction: row;
+ }
+  .product__img {
+    width: 50%;
+  }
+  .product__wrapper {
+    width: 50%;
+  }
+}
+@media (min-width: @desktop-width) {
+  .product {
+    flex-direction: column;
+  }
+   .product__img {
+     width: 100%;
+   }
+   .product__wrapper {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+   }
+   .product__desc {
+     flex-grow: 2;
+   }
+}

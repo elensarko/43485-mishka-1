@@ -23,3 +23,36 @@
 .contacts__value {
   vertical-align: top;
 }
+@media (min-width: @tablet-width) {
+  .contacts__table tbody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .contacts__email,
+  .contacts__adress {
+    width: 50%;
+  }
+}
+@media (min-width: @desktop-width) {
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 300px;
+  }
+  .contacts__title {
+    width: 50%;
+    margin: 0;
+  }
+  .contacts__wrapper {
+    width: 50%;
+  }
+  .contacts__table tbody {
+    display: table;
+  }
+  .contacts__map {
+    width: 50%;
+    order: 1;
+  }
+}

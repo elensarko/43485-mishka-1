@@ -33,3 +33,42 @@
   font-size: 14px;
   line-height: 16px;
 }
+@media (min-width: @tablet-width) {
+  .form__wrapper {
+    display: flex;
+
+    &--submit{
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+  .form__title {
+    width: 25%;
+  }
+  .form__list {
+    width: 75%;
+
+    &--color{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  .form__item {
+
+    &--color {
+      width: 50%;
+    }
+  }
+  .form__label--phone {
+    width: 100%;
+  }
+}
+@media (min-width: @desktop-width) {
+  .form__item {
+
+    &--color {
+      width: 30%;
+    }
+  }
+}

@@ -8,3 +8,16 @@
 .catalog__item {
   list-style: none;
 }
+@media (min-width: @tablet-width) {
+
+}
+@media (min-width: @desktop-width) {
+  .catalog__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .catalog__item {
+    width: 30%;
+  }
+}

@@ -11,6 +11,7 @@
 
   & img {
     width: 100%;
+    height: auto;
   }
 }
 .process__text {
@@ -18,4 +19,41 @@
   padding-right: 30px;
 
   font-size: 13px;
+}
+@media (min-width: @tablet-width) {
+ .process {
+   display: flex;
+   flex-direction: column;
+ }
+ .process__video {
+   order: 1;
+ }
+ .process__title, {
+   order: 2;
+ }
+ .process__text {
+   order: 3;
+ }
+ .process__order {
+   order: 4;
+ }
+}
+@media (min-width: @desktop-width) {
+  .process {
+    // flex-direction: row;
+    flex-wrap: wrap;
+    max-height: 400px;
+  }
+  .process__video {
+    width: 60%;
+  }
+  .process__title, {
+    width: 40%;
+  }
+  .process__text {
+    width: 40%;
+  }
+  .process__order {
+    width: 40%;
+  }
 }

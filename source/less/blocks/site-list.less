@@ -1,6 +1,14 @@
-// .site-list {
-//   padding-left: 0;
-// }
+.site-list {
+}
 .site-list__item {
-  list-style: none;
+}
+@media (min-width: @tablet-width) {
+  .site-list {
+    order: 3;
+  }
+}
+@media (min-width: @desktop-width) {
+  .site-list {
+    order: 1;
+  }
 }

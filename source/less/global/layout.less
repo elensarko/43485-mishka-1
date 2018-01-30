@@ -9,13 +9,26 @@ img {
 
 body {
   margin:  0 auto;
-  min-width:  320px;
-  max-width: 320px;
+  min-width: 320px;
+  width: 320px;
+
   font-family:  @font-family-base;
   font-size:  @font-size-base;
   line-height:  @line-height-base;
   color:  @text-color;
+
   background-color:  @body-bg;
+}
+
+@media (min-width: @tablet-width) {
+  body {
+    width: @tablet-width;
+  }
+}
+@media (min-width: @desktop-width) {
+  body {
+    width: @desktop-width;
+  }
 }
 
 .visually-hidden {
