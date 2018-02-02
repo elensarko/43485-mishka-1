@@ -5,10 +5,15 @@
 @media (min-width: @tablet-width) {
   .site-list {
     order: 3;
+
+    width: 50%;
   }
 }
 @media (min-width: @desktop-width) {
   .site-list {
     order: 1;
+  }
+  .site-list__item:nth-of-type(1) {
+    border-right: 1px solid #ebebeb;
   }
 }

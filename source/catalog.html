@@ -13,44 +13,52 @@
 
   <header class="page-header">
 
-    <nav class="main-nav">
-      <a class="page-header__logo">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="img/logo-mobile.svg" width="226" height="30" alt="Интернет магазин «Мишка»">
       </a>
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <!-- <div class="main-nav__wrapper"> -->
-        <ul class="main-nav__list site-list">
-          <li class="main-nav__item site-list__item site-list__item--active">
-            <a>Каталог товаров</a>
-          </li>
-          <li class="main-nav__item site-list__item">
-            <a href="photo.html">Вязание на заказ</a>
-          </li>
-        </ul>
-        <ul class="main-nav__list user-list">
-          <li class="main-nav__item user-list__item">
-            <a href="form.html">Поиск по сайту</a>
-          </li>
-          <li class="main-nav__item user-list__item">
-            <a href="#">Корзина: <span>пока пуста</span></a>
-          </li>
-        </ul>
-        <ul class="main-nav__list promo-nav">
-          <li class="main-nav__item promo-nav__item">
-            <a href="#">Новые поступления</a>
-          </li>
-          <li class="main-nav__item promo-nav__item">
-            <a href="#">Распродажа</a>
-          </li>
-        </ul>
-        <ul class="main-nav__list delivery">
-          <li class="main-nav__item main-nav__item--no-link">
-            <p>
-              Бесплатная доставка по России
-            </p>
-          </li>
-        </ul>
-      <!-- </div> -->
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <ul class="main-nav__list site-list">
+        <li class="main-nav__item site-list__item site-list__item--active">
+          <a href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="main-nav__item site-list__item">
+          <a href="#">Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="main-nav__list user-list">
+        <li class="main-nav__item user-list__item user-list__item--search">
+          <a href="#">
+            <svg class="user-list__icon user-list__icon--search" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
+              <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
+            </svg>
+            Поиск по сайту
+          </a>
+        </li>
+        <li class="main-nav__item user-list__item">
+          <a href="#">
+            <svg class="user-list__icon user-list__icon--cart" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
+              <path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
+            </svg>
+            Корзина: <span>пока пуста</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="main-nav__list promo-nav">
+        <li class="main-nav__item promo-nav__item">
+          <a href="#">Новые поступления</a>
+        </li>
+        <li class="main-nav__item promo-nav__item">
+          <a href="#">Распродажа</a>
+        </li>
+      </ul>
+      <ul class="main-nav__list delivery">
+        <li class="main-nav__item main-nav__item--no-link">
+          <p>
+            Бесплатная доставка по России
+          </p>
+        </li>
+      </ul>
     </nav>
   </header>
 
@@ -65,53 +73,68 @@
     <section class="catalog">
       <ul class="catalog__list">
         <li class="catalog__item product">
-          <div class="product__img">
+          <a class="product__img" href="#">
             <img src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик" />
-          </div>
+          </a>
           <div class="product__wrapper">
-            <h3 class="product__title">
-            Зайчик-попрыгайчик
-            </h3>
+            <a class="product__title" href="#">
+              Зайчик-попрыгайчик
+            </a>
             <p class="product__desc">
               Рост 30 см, вес 200 г
             </p>
             <p class="product__price">
               1200 руб.
-              <a class="product__order">В корзину</a>
+              <a class="product__order" href="#">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
+                  <path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
+                </svg>
+                В корзину
+              </a>
             </p>
           </div>
         </li>
         <li class="catalog__item product">
-          <div class="product__img">
+          <a class="product__img" href="#">
             <img src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья" />
-          </div>
+          </a>
           <div class="product__wrapper">
-            <h3 class="product__title">
-            Корзинка для белья
-            </h3>
+            <a class="product__title" href="#">
+              Корзинка для белья
+            </a>
             <p class="product__desc">
               Диаметр 15 см, высота 10 см
             </p>
             <p class="product__price">
               690 руб.
-              <a class="product__order">В корзину</a>
+              <a class="product__order" href="#">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
+                  <path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
+                </svg>
+                В корзину
+              </a>
             </p>
           </div>
         </li>
         <li class="catalog__item product">
-          <div class="product__img">
+          <a class="product__img" href="#">
             <img src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Корзинка для игрушек" />
-          </div>
+          </a>
           <div class="product__wrapper">
-            <h3 class="product__title">
-            Большая корзина для игрушек
-            </h3>
+            <a class="product__title" href="#">
+              Большая корзина для игрушек
+            </a>
             <p class="product__desc">
               Диаметр 30 см, высота 30 см
             </p>
             <p class="product__price">
-              690 руб.
-              <a class="product__order">В корзину</a>
+              1500 руб.
+              <a class="product__order" href="#">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
+                  <path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
+                </svg>
+                В корзину
+              </a>
             </p>
           </div>
         </li>
@@ -120,15 +143,22 @@
 
     <section class="process">
       <h3 class="process__title">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+        <g transform="translate(0 192)">
+          <path d="M26-177l6-4v16l-6-4V-177z M24-177v8c0,2.209-1.791,4-4,4H4c-2.209,0-4-1.791-4-4v-8c0-2.209,1.791-4,4-4h10 c0-1.105,0.895-2,2-2v-2H5c-0.553,0-1-0.447-1-1s0.447-1,1-1h12c0.553,0,1,0.447,1,1v3c1.105,0,2,0.895,2,2 C22.209-181,24-179.209,24-177z M12-177H4v8h8V-177z M20-176c0-0.553-0.447-1-1-1h-4c-0.553,0-1,0.447-1,1s0.447,1,1,1h4 C19.553-175,20-175.447,20-176z"/>
+        </g>
+        </svg>
         Процесс производства
       </h3>
       <div class="process__video">
         <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="Корзинка для белья" />
       </div>
-      <p class="process__text">
-        По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-      </p>
-      <a class="process__order btn">Сделать заказ</a>
+      <div class="process__wrapper">
+        <p class="process__text">
+          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+        </p>
+        <a class="process__order btn">Сделать заказ</a>
+      </div>
     </section>
 
   </main>
@@ -153,6 +183,8 @@
       <a class="page-footer__copyright-link" href="#">HTML Academy</a>
     </p>
   </footer>
+
+  <script src="../js/app.js"></script>
 
 </body>
 

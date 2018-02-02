@@ -1,9 +1,17 @@
 @media (min-width: @tablet-width) {
-
+  .promo-nav {
+    display: none;
+  }
 }
 @media (min-width: @desktop-width) {
   .promo-nav {
-    display: block;
+    display: flex;
     order: 4;
+  }
+  .promo-nav__item a {
+    font-size: 15px;
+    line-height: 24px;
+
+    padding-top: 18px;
   }
 }
