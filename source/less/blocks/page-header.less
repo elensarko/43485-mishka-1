@@ -2,14 +2,16 @@
   position: relative;
   z-index: 2;
 }
+
 .page-header__logo {
   display: block;
   width: 100%;
   padding: 25px 30px;
-
   text-align: center;
 }
-.page-header__logo-image {}
+
+.page-header__logo-image {
+}
 
 @media (max-width: @mobile-width-only) {
   .page-header__logo {
@@ -21,17 +23,19 @@
   .page-header {
     padding: 0 50px;
   }
+
   .page-header__logo {
     order: 1;
     width: 156px;
-
     padding: 0;
   }
 }
+
 @media (min-width: @desktop-width) {
   .page-header {
     padding: 0 15px;
   }
+
   .page-header__logo {
     order: 2;
   }

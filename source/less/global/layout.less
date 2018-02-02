@@ -11,12 +11,10 @@ body {
   margin:  0 auto;
   min-width: 320px;
   width: 320px;
-
   font-family:  @font-family-base;
   font-size:  @font-size-base;
   line-height:  @line-height-base;
   color:  @text-color;
-
   background-color:  @body-bg;
 }
 
@@ -25,6 +23,7 @@ body {
     width: @tablet-width;
   }
 }
+
 @media (min-width: @desktop-width) {
   body {
     width: @desktop-width;
@@ -33,15 +32,12 @@ body {
 
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;

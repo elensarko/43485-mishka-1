@@ -1,32 +1,31 @@
 .main-nav {
   position: relative;
 }
+
 .main-nav__toggle {
   position: absolute;
   top: 19px;
   right: 20px;
   z-index: 2;
-
   display: block;
   width: 40px;
   height: 40px;
-
   cursor: pointer;
   background-color: #ffffff;
   border: none;
-
   &:hover,
   &:active {
-
   }
 }
+
 .main-nav--closed .main-nav__toggle {
-  background-image: url(../img/icon-menu-open.svg);
+  background-image: url("../img/icon-menu-open.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .main-nav--opened .main-nav__toggle {
-  background-image: url(../img/icon-menu-close.svg);
+  background-image: url("../img/icon-menu-close.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -34,11 +33,11 @@
 .main-nav__list {
   padding-left: 0;
   margin: 0;
-
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
 }
+
 .main-nav__item {
   list-style: none;
 
@@ -47,23 +46,26 @@
     width: 100%;
     padding: 21px 30px;
     padding-left: 75px;
-
     font-size: 17px;
     line-height: 24px;
     color: @link-color;
     font-weight: bold;
     text-decoration: none;
   }
+
   & a[href]:hover {
     color: @link-color-hover;
   }
+
   & a[href]:active {
     color: @link-color-active;
   }
 }
+
 .main-nav__item--no-link {
   display: none;
 }
+
 .promo-nav {
   display: none;
 }
@@ -72,9 +74,11 @@
   .main-nav--closed .site-list__item {
     display: none;
   }
+
   .main-nav--closed .user-list__item {
     display: none;
   }
+
   .main-nav--nojs .main-nav__toggle {
     display: none;
   }
@@ -82,7 +86,6 @@
   .main-nav__item a {
     padding: 32px 0px;
     padding-left: 80px;
-
     box-shadow: 0px 1px 0px #ebebeb;
   }
 }
@@ -94,6 +97,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
+
   .main-nav__item {
     list-style: none;
 
@@ -102,13 +106,16 @@
       margin-right: 19px;
     }
   }
+
   .main-nav__toggle {
     display: none;
   }
+
   .main-nav__list {
     display: flex;
     flex-direction: row;
   }
+
   .main-nav__item--no-link {
     display: block;
     font-size: 15px;
@@ -120,8 +127,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .main-nav__list {
-  }
   .main-nav__item {
 
     a {
@@ -131,6 +136,7 @@
       margin-right: 0px;
     }
   }
+
   .main-nav__item--no-link {
     padding-right: 35px;
   }
