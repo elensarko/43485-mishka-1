@@ -54,13 +54,13 @@
     width: 35px;
     border: 2px solid @text-color;
   }
-
-  & input[type="checkbox"] + label::before {
-  }
-
-  & input[type="radio"] + label::before {
-    border-radius: 50%;
-  }
+  //
+  // & input[type="checkbox"] + label::before {
+  // }
+  //
+  // & input[type="radio"] + label::before {
+  //   border-radius: 50%;
+  // }
 
   & input[type="checkbox"]:checked + label::before {
     background-image: url("../img/icon-tick.svg");
@@ -80,18 +80,18 @@
     background-color: @text-color-brend;
     border-radius: 50%;
   }
-
-  & input[type="checkbox"]:disabled + label::before {
-  }
-
-  & input[type="checkbox"]:checked:disabled + label::before {
-  }
-
-  & input[type="radio"]:disabled + label::before {
-  }
-
-  & input[type="radio"]:checked:disabled + label::before {
-  }​
+  //
+  // & input[type="checkbox"]:disabled + label::before {
+  // }
+  //
+  // & input[type="checkbox"]:checked:disabled + label::before {
+  // }
+  //
+  // & input[type="radio"]:disabled + label::before {
+  // }
+  //
+  // & input[type="radio"]:checked:disabled + label::before {
+  // }​
 
   & input::placeholder,
   & textarea::placeholder {
@@ -292,6 +292,7 @@
   .form__title {
     width: 25%;
     margin-top: 18px;
+
     &::after {
       display: none;
     }
