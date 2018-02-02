@@ -1,7 +1,40 @@
 .order {
   padding-left: 30px;
   padding-right: 30px;
+  padding-top: 9px;
 }
+
 .order__desc {
+  margin-bottom: 25px;
   font-size: 13px;
+}
+
+@media (min-width: @tablet-width) {
+  .order {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 55px;
+  }
+
+  .order__desc {
+    margin-bottom: 55px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order {
+    padding-top: 104px;
+  }
+
+  .order__desc {
+    margin-bottom: 55px;
+    padding-left: 224px;
+    padding-right: 224px;
+    font-size: 17px;
+    line-height: 30px;
+  }
 }

@@ -1,25 +1,51 @@
 .page-footer {
+  margin-top: 15px;
   padding-left: 30px;
   padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  background-color: @body-bg-grey;
 }
+
+.page-footer__social {
+  margin-bottom: 23px;
+}
+
 .page-footer__copyright {
   font-size: 19px;
   line-height: 18px;
   font-weight: bold;
+  text-align: center;
+
+  & a {
+    display: inline-block;
+    vertical-align: text-bottom;
+    width: 28px;
+    height: 35px;
+    margin-left: 24px;
+    font-size: 0;
+    background-image: url("../img/htmlacademy.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
+  }
 }
+
 .page-footer__logo {
   display: none;
 }
+
 @media (min-width: @tablet-width) {
   .page-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
+
   .page-footer__logo {
     display: block;
   }
 }
-@media (min-width: @desktop-width) {
-
-}
+//
+// @media (min-width: @desktop-width) {
+// }

@@ -1,50 +1,123 @@
 .about-us {
   padding-left: 30px;
   padding-right: 30px;
+  padding-top: 10px;
 }
+
 .about-us__title {
+  margin-top: 19px;
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
 }
+
 .about-us__benefits {
   padding-left: 0;
 }
+
 .about-us__benefit {
+  margin-bottom: 22px;
   list-style: none;
   font-size: 17px;
   line-height: 20px;
   font-weight: bold;
+
+  &::before {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 11px;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--eco::before {
+    background-image: url("../img/icon-feature-flower.svg");
+  }
+
+  &--price::before {
+    background-image: url("../img/icon-feature-money.svg");
+  }
+
+  &--like::before {
+    background-image: url("../img/icon-feature-heart.svg");
+  }
+
+  &--handmade::before {
+    background-image: url("../img/icon-feature-ball.svg");
+  }
+
+  &--manufacturer::before {
+    background-image: url("../img/icon-feature-rocket.svg");
+  }
+
+  &--packing::before {
+    background-image: url("../img/icon-feature-gift.svg");
+  }
 }
+
 @media (min-width: @tablet-width) {
+  .about-us {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 31px;
+    padding-bottom: 16px;
+  }
+
+  .about-us__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
   .about-us__benefits {
     display: flex;
     flex-wrap: wrap;
   }
+
   .about-us__benefit {
     width: 50%;
+    margin-bottom: 50px;
+    font-size: 20px;
+    line-height: 22px;
 
     &--eco {
       order: 1;
-      }
+    }
+
     &--price {
       order: 3;
-      }
+    }
+
     &--like {
       order: 5;
-      }
+    }
+
     &--handmade {
       order: 2;
     }
-    &--manufacturer{
+
+    &--manufacturer {
       order: 4;
     }
+
     &--packing {
       order: 6;
     }
   }
-
 }
-@media (min-width: @desktop-width) {
 
+@media (min-width: @desktop-width) {
+  .about-us {
+    padding-top: 39px;
+    padding-left: 226px;
+    padding-right: 226px;
+    padding-bottom: 25px;
+  }
+
+  .about-us__title {
+    margin-bottom: 42px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

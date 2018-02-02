@@ -1,49 +1,132 @@
 .product {
+  border: 1px solid #ebebeb;
 
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
+
 .product__img {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 26px;
 
+  & img {
+    width: 100%;
+    height: auto;
+  }
 }
+
 .product__wrapper {
   padding-left: 30px;
   padding-right: 30px;
+  padding-bottom: 6px;
 }
+
 .product__title {
+  margin-bottom: 5px;
   font-size: 17px;
   font-weight: bold;
+  color: @text-color;
+  text-decoration: none;
+
+  &:hover {
+    color: @link-color-hover;
+  }
+
+  &:active {
+    color: @link-color-active;
+  }
 }
+
 .product__desc {
+  margin-top: 5px;
+  margin-bottom: 20px;
   font-size: 13px;
   line-height: 30px;
 }
+
 .product__price {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
   font-weight: bold;
+  border-top: 1px solid #ebebeb;
 }
+
+.product__order {
+  width: 19px;
+  height: 19px;
+  font-size: 0;
+}
+
 @media (min-width: @tablet-width) {
- .product {
-   display: flex;
-   flex-direction: row;
- }
+  .product {
+    display: flex;
+    flex-direction: row;
+  }
+
   .product__img {
     width: 50%;
+    margin-bottom: 0;
+    min-height: 331px;
   }
+
   .product__wrapper {
+    display: flex;
+    flex-direction: column;
     width: 50%;
+    padding-top: 24px;
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+
+  .product__title {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .product__desc {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .product__price {
+    margin-top: auto;
   }
 }
+
 @media (min-width: @desktop-width) {
   .product {
     flex-direction: column;
   }
-   .product__img {
-     width: 100%;
-   }
-   .product__wrapper {
-     width: 100%;
-     display: flex;
-     flex-direction: column;
-   }
-   .product__desc {
-     flex-grow: 2;
-   }
+
+  .product__img {
+    width: 100%;
+    min-height: 462px;
+  }
+
+  .product__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+  }
+
+  .product__desc {
+    margin-bottom: 14px;
+  }
+
+  .product__price {
+    font-size: 17px;
+    line-height: 24px;
+    margin-top: auto;
+  }
 }

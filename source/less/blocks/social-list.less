@@ -1,7 +1,20 @@
 .social-list {
   padding: 0;
-  display: flex;
+  padding-bottom: 18px;
+  text-align: center;
+  border-bottom: 1px solid #bebebe;
 }
+
 .social-list__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
   list-style: none;
+  font-size: 0;
+
+  &:nth-last-of-type(1) {
+    margin-right: 0;
+  }
 }

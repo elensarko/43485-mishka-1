@@ -1,8 +1,44 @@
-.page-title h2 {
+.page-title {
+  padding-top: 48px;
+  padding-bottom: 52px;
+  padding-left: 30px;
+  padding-right: 30px;
   background-color: @body-bg-grey;
+  border-top: 1px solid #ebebeb;
 
-  font-size: 27px;
-  line-height: 30px;
-  font-weight: bold;
-  text-align: center;
+  & h2 {
+    font-size: 27px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-title {
+    padding-top: 60px;
+    padding-bottom: 44px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: -62px;
+
+    & h2 {
+      font-size: 43px;
+      line-height: 50px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-title {
+    padding-bottom: 60px;
+    margin-top: -74px;
+    padding-top: 73px;
+
+    & h2 {
+      margin-top: 20px;
+      font-size: 53px;
+      line-height: 57px;
+    }
+  }
 }
