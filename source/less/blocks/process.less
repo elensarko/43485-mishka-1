@@ -27,11 +27,6 @@
   width: 100%;
   margin-bottom: 27px;
 
-  & img {
-    width: 100%;
-    height: auto;
-  }
-
   &::before {
     position: absolute;
     top: 50%;
@@ -45,6 +40,24 @@
     background-image: url("../img/icon-play.svg");
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
+  }
+
+  &:hover::before {
+    margin-left: -60px;
+    margin-top: -47px;
+    width: 120px;
+    height: 94px;
+    background-size: cover;
+  }
+
+  &:active::before,
+  &:focus::before {
+    margin-left: -40px;
+    margin-top: -31px;
+    width: 80px;
+    height: 62px;
+    background-size: cover;
   }
 }
 

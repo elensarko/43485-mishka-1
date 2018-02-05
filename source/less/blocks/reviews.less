@@ -18,7 +18,7 @@
   padding-bottom: 15px;
 }
 
-.reviews__item{
+.reviews__item {
   margin: 0;
   line-height: 30px;
 }
@@ -56,6 +56,15 @@
   &--next {
     background-image: url("../img/icon-right-arrow.svg");
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -72,6 +81,11 @@
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px auto;
+    }
   }
 
   .reviews__title {

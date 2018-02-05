@@ -5,13 +5,20 @@
 
 .page-header__logo {
   display: block;
-  width: 100%;
-  padding: 25px 30px;
+  width: 86px;
+  margin: 0 auto;
+  padding: 22px 0;
   text-align: center;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
 }
-//
-// .page-header__logo-image {
-// }
 
 @media (max-width: @mobile-width-only) {
   .page-header__logo {
@@ -26,8 +33,8 @@
 
   .page-header__logo {
     order: 1;
-    width: 156px;
-    padding: 0;
+    width: 110px;
+    margin: 0;
   }
 }
 
@@ -38,5 +45,7 @@
 
   .page-header__logo {
     order: 2;
+    width: 149px;
+    padding: 9px 0 7px;
   }
 }

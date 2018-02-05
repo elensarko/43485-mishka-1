@@ -29,9 +29,9 @@
 
 .form__item {
   position: relative;
-  padding-left: 63px;
   margin-bottom: 12px;
   list-style: none;
+
 
   & input[type="radio"],
   & input[type="checkbox"] {
@@ -54,13 +54,28 @@
     width: 35px;
     border: 2px solid @text-color;
   }
+
+  & input[type="checkbox"]:hover + label::before,
+  & input[type="radio"]:hover + label::before {
+    border: 2px solid @text-color-brend;
+  }
+
+  & input[type="checkbox"]:active + label::before,
+  & input[type="radio"]:active + label::before {
+    border: 2px solid #c6c6c6;
+  }
+
+  & input[type="checkbox"]:focus + label::before,
+  & input[type="radio"]:focus + label::before {
+    border: 2px solid #c6c6c6;
+  }
   //
   // & input[type="checkbox"] + label::before {
   // }
   //
-  // & input[type="radio"] + label::before {
-  //   border-radius: 50%;
-  // }
+  & input[type="radio"] + label::before {
+    border-radius: 50%;
+  }
 
   & input[type="checkbox"]:checked + label::before {
     background-image: url("../img/icon-tick.svg");
@@ -116,7 +131,11 @@
   & .form__item {
     padding: 0;
     margin-bottom: 19px;
-    border-bottom: 2px solid;
+
+    &:hover input,
+    & input:focus {
+      border-bottom: 2px solid @text-color-brend;
+    }
   }
 
   & .form__label--input {
@@ -130,6 +149,7 @@
     border: none;
     font-size: 17px;
     line-height: 18px;
+    border-bottom: 2px solid;
   }
 }
 
@@ -143,6 +163,11 @@
   .form__item {
     padding-left: 0;
     margin-bottom: 0;
+
+    &:hover input,
+    & input:focus {
+      border-bottom: 2px solid @text-color-brend;
+    }
   }
 
   & input {
@@ -169,12 +194,19 @@
     padding: 14px 17px;
     font-size: 17px;
     line-height: 18px;
-    color: #d4d4d4;
+    // color: #d4d4d4;
     font-weight: normal;
+    border: 2px solid;
+  }
+
+  &:hover textarea,
+  & textarea:focus {
+    border: 2px solid @text-color-brend;
   }
 }
 
 .form__label {
+  padding-left: 63px;
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
@@ -320,7 +352,6 @@
   }
 
   .form__item {
-    padding-left: 82px;
     margin-bottom: 52px;
 
     & input[type="checkbox"] + label::before,
@@ -345,6 +376,10 @@
     &--color {
       width: 50%;
     }
+  }
+
+  .form__label {
+    padding-left: 82px;
   }
 
   .form__label--phone {

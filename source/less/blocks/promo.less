@@ -44,11 +44,6 @@
 
 .promo__photo {
   margin-bottom: 24px;
-
-  & img {
-    width: 100%;
-    height: auto;
-  }
 }
 
 .promo__price {
@@ -64,12 +59,29 @@
 
 @media (min-width: @tablet-width) {
   .promo {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     padding-top: 28px;
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 28px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      display: block;
+      width: auto;
+      height: 20px;
+      content: " ";
+      background-image: url("../img/bg-zigzag-line.svg");
+      background-repeat: repeat-x;
+      background-position: center 4px;
+      background-size: 800px;
+    }
   }
 
   .promo__header {
@@ -133,6 +145,16 @@
   .promo {
     padding-top: 48px;
     padding-bottom: 58px;
+
+    &::before {
+      left: 50px;
+      right: 50px;
+      bottom: 0;
+      height: 30px;
+      background-image: url("../img/bg-zigzag-line.svg");
+      background-position: center 4px;
+      background-size: 1150px;
+    }
   }
 
   .promo__header {
