@@ -38,6 +38,17 @@
     padding-bottom: 4px;
     box-shadow: 0 1px 0 0 #62d1ba;
   }
+
+  & a:hover {
+    color: @text-color-brend;
+  }
+
+  & a:active,
+  & a:focus {
+    color: @text-color-brend;
+    box-shadow: none;
+    opacity: 0.3;
+  }
 }
 
 .contacts__map iframe {
@@ -52,7 +63,24 @@
 
 @media (min-width: @tablet-width) {
   .contacts {
+    position: relative;
     margin-top: 86px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -20px;
+      z-index: 1;
+      display: block;
+      width: auto;
+      height: 20px;
+      content: " ";
+      background-image: url("../img/bg-zigzag-line.svg");
+      background-repeat: repeat-x;
+      background-position: center 4px;
+      background-size: 800px;
+    }
   }
 
   .contacts__title {
@@ -118,6 +146,18 @@
     padding-left: 224px;
     padding-right: 50px;
     padding-bottom: 50px;
+
+    &::before {
+      left: 50px;
+      right: 50px;
+      top: -30px;
+      height: 30px;
+      content: " ";
+      background-image: url("../img/bg-zigzag-line.svg");
+      background-repeat: repeat-x;
+      background-position: center 4px;
+      background-size: 1150px;
+    }
   }
 
   .contacts__title {

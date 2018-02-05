@@ -20,9 +20,12 @@
   }
 }
 
-.user-list__item a[href]:active {
-  .user-list__icon path {
-    fill: #d0f1ea;
+.user-list__item {
+  a[href]:active,
+  a[href]:focus {
+    .user-list__icon path {
+      fill: #d0f1ea;
+    }
   }
 }
 
@@ -31,6 +34,7 @@
     order: 2;
     justify-content: flex-end;
     width: 52%;
+    margin-left: auto;
 
     a {
       padding: 32px 0;

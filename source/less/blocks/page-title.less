@@ -16,6 +16,7 @@
 
 @media (min-width: @tablet-width) {
   .page-title {
+    position: relative;
     padding-top: 60px;
     padding-bottom: 44px;
     padding-left: 50px;
@@ -25,6 +26,22 @@
     & h2 {
       font-size: 43px;
       line-height: 50px;
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      display: block;
+      width: auto;
+      height: 20px;
+      content: " ";
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-position: center 9px;
+      background-size: 780px;
     }
   }
 }
@@ -39,6 +56,11 @@
       margin-top: 20px;
       font-size: 53px;
       line-height: 57px;
+    }
+
+    &::before {
+      background-position: center 2px;
+      background-size: 1150px;
     }
   }
 }
