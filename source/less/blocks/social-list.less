@@ -1,6 +1,9 @@
 .social-list {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
   padding: 0;
-  padding-bottom: 18px;
+  padding-bottom: 10px;
   text-align: center;
   border-bottom: 1px solid #bebebe;
 }
@@ -18,3 +21,13 @@
     margin-right: 0;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .social-list {
+    border-bottom: none;
+    padding-left: 70px;
+  }
+}
+
+// @media (min-width: @desktop-width) {
+// }

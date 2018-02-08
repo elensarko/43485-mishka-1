@@ -33,12 +33,13 @@
 
 .features__item {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: space-between;
   min-height: 102px;
   padding-left: 30px;
   padding-top: 24px;
-  padding-right: 50%;
-  padding-bottom: 30px;
+  padding-right: 30px;
+  padding-bottom: 16px;
   background-color: #63d1bb;
   font-size: 19px;
   line-height: 24px;
@@ -46,30 +47,17 @@
   text-decoration: none;
   font-weight: bold;
 
+  & p {
+    width: 50%;
+    margin: 0;
+  }
+
+  & svg {
+    fill: #3bb09d;
+  }
+
   &--toys {
     background-color: #55c3b2;
-  }
-
-  &::before {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    display: block;
-    content: " ";
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &--subject::before {
-    width: 60px;
-    height: 64px;
-    background-image: url("../img/icon-interior.svg");
-  }
-
-  &--toys::before {
-    width: 60px;
-    height: 60px;
-    background-image: url("../img/icon-toy.svg");
   }
 
   &:hover,
@@ -77,11 +65,19 @@
   &:focus {
     padding-bottom: 35px;
     margin-top: -5px;
+
+    & svg {
+      fill: #28a591;
+    }
   }
 
   &:active,
   &:focus {
     color: rgba(256, 256, 256, 0.6);
+
+    & svg {
+      fill: #43c0aa;
+    }
   }
 }
 
@@ -138,7 +134,12 @@
   .features__item {
     padding-left: 35px;
     padding-top: 28px;
+    padding-bottom: 28px;
     line-height: 30px;
+
+    & p {
+      width: 35%;
+    }
 
     &::before {
       top: 28px;
@@ -172,9 +173,5 @@
     font-size: 53px;
     line-height: 57px;
     margin-bottom: 359px;
-  }
-
-  .features__item {
-    padding-right: 60%;
   }
 }
