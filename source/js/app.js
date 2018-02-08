@@ -15,7 +15,7 @@ navToggle.addEventListener('click', function() {
 });
 
 //Открытие и закрытие модального окна
-var link = document.querySelector('.promo__order');
+var link = document.querySelector('.modal-link');
 var popup = document.querySelector('.modal');
 var overlay = document.querySelector('.modal__overlay');
 
