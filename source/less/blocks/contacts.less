@@ -1,5 +1,23 @@
 .contacts {
-  padding-top: 18px;
+  position: relative;
+  padding-top: 4px;
+  margin-bottom: 14px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -20px;
+    z-index: 1;
+    display: block;
+    width: auto;
+    height: 6px;
+    content: " ";
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-position: center 0;
+    background-size: 100%;
+  }
 }
 
 .contacts__wrapper {
@@ -63,21 +81,11 @@
 
 @media (min-width: @tablet-width) {
   .contacts {
-    position: relative;
     margin-top: 86px;
+    margin-bottom: 0;
 
     &::before {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: -20px;
-      z-index: 1;
-      display: block;
-      width: auto;
       height: 20px;
-      content: " ";
-      background-image: url("../img/bg-zigzag-line.svg");
-      background-repeat: repeat-x;
       background-position: center 4px;
       background-size: 800px;
     }
@@ -87,6 +95,7 @@
     position: relative;
     margin-left: 50px;
     margin-right: 50px;
+    margin-top: 56px;
     margin-bottom: 46px;
     font-size: 43px;
     line-height: 50px;

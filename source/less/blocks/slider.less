@@ -10,3 +10,53 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.slider__btn-wrapper {
+  font-size: 0;
+  margin-bottom: 38px;
+}
+
+.slider__btn {
+  display: inline-block;
+  vertical-align: top;
+  height: 52px;
+  width: 50%;
+  cursor: pointer;
+  border: 1px solid #bebebe;
+  background-color: #ffffff;
+  background-image: url("../img/icon-left-arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--next {
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .slider__btn-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    text-align: right;
+  }
+
+  .slider__btn {
+    height: 40px;
+    width: 88px;
+    border: none;
+  }
+}
+
+// @media (min-width: @desktop-width) {
+// }

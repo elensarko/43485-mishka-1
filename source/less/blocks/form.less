@@ -168,6 +168,10 @@
     & input:focus {
       border-bottom: 2px solid @text-color-brend;
     }
+
+    &:hover svg {
+      fill: @text-color-brend;
+    }
   }
 
   & input {
@@ -179,6 +183,18 @@
     line-height: 18px;
     border: none;
     border-bottom: 2px solid;
+  }
+}
+
+.form__label--phone,
+.form__label--email {
+  position: relative;
+  width: 100%;
+
+  & svg {
+    position: absolute;
+    top: 0;
+    right: 2px;
   }
 }
 
@@ -439,6 +455,6 @@
 
   .form__wrapper--submit {
     padding: 0 224px;
-    padding-bottom: 24px;
+    padding-bottom: 36px;
   }
 }
