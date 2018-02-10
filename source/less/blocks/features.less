@@ -2,6 +2,7 @@
   padding-top: 30px;
   min-width: 300px;
   border-top: 1px solid #ebebeb;
+  background-color: #f9f9f9;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center -19px;
@@ -25,13 +26,13 @@
 
 .features__list {
   padding-left: 0;
+}
 
-  & li {
-    list-style: none;
-    background-color: #63d1bb;
-  }
+.features__list li {
+  list-style: none;
+  background-color: #63d1bb;
 
-  & li:nth-child(even) {
+  &:nth-child(even) {
     background-color: #55c3b2;
   }
 }
@@ -52,15 +53,6 @@
   text-decoration: none;
   font-weight: bold;
 
-  & p {
-    width: 50%;
-    margin: 0;
-  }
-
-  & svg {
-    fill: #3bb09d;
-  }
-
   &--toys {
     background-color: #55c3b2;
   }
@@ -69,21 +61,32 @@
   &:active,
   &:focus {
     top: -5px;
+  }
 
-    & svg {
-      fill: #28a591;
-    }
+  &:hover svg {
+    fill: #28a591;
   }
 
   &:active,
   &:focus {
     color: rgba(256, 256, 256, 0.6);
+  }
 
-    & svg {
-      fill: #43c0aa;
-    }
+  &:active svg,
+  &:focus svg {
+    fill: #43c0aa;
   }
 }
+
+.features__item p {
+  width: 50%;
+  margin: 0;
+}
+
+.features__item svg {
+  fill: #3bb09d;
+}
+
 
 @media (min-width: @tablet-width) {
   .features {
@@ -129,10 +132,10 @@
 
   .features__list {
     display: flex;
+  }
 
-    & li {
-      width: 50%;
-    }
+  .features__list li {
+    width: 50%;
   }
 
   .features__item {
@@ -141,14 +144,14 @@
     padding-bottom: 28px;
     line-height: 30px;
 
-    & p {
-      width: 35%;
-    }
-
     &::before {
       top: 28px;
       right: 26px;
     }
+  }
+
+  .features__item p {
+    width: 35%;
   }
 
   .features__item--toys::before {
@@ -159,7 +162,7 @@
 
 @media (min-width: @desktop-width) {
   .features {
-    margin-top: -73px;
+    margin-top: -65px;
     background-image: url("../img/hero-desktop@1x.jpg");
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {

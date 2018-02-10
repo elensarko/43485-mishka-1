@@ -5,13 +5,13 @@
   padding-right: 30px;
   background-color: @body-bg-grey;
   border-top: 1px solid #ebebeb;
+}
 
-  & h2 {
-    font-size: 27px;
-    line-height: 30px;
-    font-weight: bold;
-    text-align: center;
-  }
+.page-title h2 {
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
@@ -22,11 +22,6 @@
     padding-left: 50px;
     padding-right: 50px;
     margin-top: -62px;
-
-    & h2 {
-      font-size: 43px;
-      line-height: 50px;
-    }
 
     &::before {
       position: absolute;
@@ -44,23 +39,29 @@
       background-size: 780px;
     }
   }
+
+  .page-title h2 {
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-title {
     padding-bottom: 60px;
-    margin-top: -74px;
+    margin-top: -65px;
     padding-top: 73px;
 
-    & h2 {
-      margin-top: 20px;
-      font-size: 53px;
-      line-height: 57px;
-    }
 
     &::before {
       background-position: center 2px;
       background-size: 1150px;
     }
+  }
+
+  .page-title h2 {
+    margin-top: 20px;
+    font-size: 53px;
+    line-height: 57px;
   }
 }

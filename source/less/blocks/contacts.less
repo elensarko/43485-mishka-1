@@ -16,7 +16,7 @@
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
     background-position: center 0;
-    background-size: 100%;
+    background-size: 320px;
   }
 }
 
@@ -49,20 +49,20 @@
 .contacts__value {
   vertical-align: top;
   padding-bottom: 29px;
+}
 
-  & a {
-    text-decoration: none;
-    color: @text-color;
-    padding-bottom: 4px;
-    box-shadow: 0 1px 0 0 #62d1ba;
-  }
+.contacts__value a {
+  text-decoration: none;
+  color: @text-color;
+  padding-bottom: 4px;
+  box-shadow: 0 1px 0 0 #62d1ba;
 
-  & a:hover {
+  &:hover {
     color: @text-color-brend;
   }
 
-  & a:active,
-  & a:focus {
+  &:active,
+  &:focus {
     color: @text-color-brend;
     opacity: 0.3;
   }
@@ -124,12 +124,12 @@
     font-size: 17px;
     line-height: 30px;
     text-align: left;
+  }
 
-    & tbody {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
+  .contacts__table tbody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .contacts__email,

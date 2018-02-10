@@ -8,10 +8,6 @@
   padding: 22px 0;
   text-align: center;
 
-  & img {
-    width: 86px;
-  }
-
   &:hover {
     opacity: 0.6;
   }
@@ -20,6 +16,10 @@
   &:focus {
     opacity: 0.3;
   }
+}
+
+.page-header__logo img {
+  width: 86px;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -36,10 +36,10 @@
   .page-header__logo {
     order: 1;
     margin: 0;
+  }
 
-    & img {
-      width: 110px;
-    }
+  .page-header__logo img {
+    width: 110px;
   }
 }
 
@@ -51,9 +51,10 @@
   .page-header__logo {
     order: 2;
     padding: 9px 0 7px;
+  }
 
-    & img {
-      width: 149px;
-    }
+  .page-header__logo img {
+    width: 149px;
+    margin-left: -60px;
   }
 }
