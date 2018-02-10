@@ -1,10 +1,46 @@
 .form__wrapper {
-  margin-bottom: 42px;
+  margin-bottom: 44px;
+
+  &--name {
+    margin-bottom: 32px;
+  }
+
+  &--contact {
+    margin-bottom: 21px;
+  }
+
+  &--contact input {
+    width: 100%;
+    padding: 15px 0;
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 18px;
+    border: none;
+    border-bottom: 2px solid;
+  }
+
+  &--additionally {
+    margin-bottom: 10px;
+
+    &:hover textarea,
+    & textarea:focus {
+      border: 2px solid @text-color-brend;
+    }
+  }
+
+  &--additionally textarea {
+    width: 100%;
+    padding: 14px 17px;
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: normal;
+    border: 2px solid;
+  }
 }
 
 .form__title {
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 33px;
   font-size: 17px;
   line-height: 18px;
   color: @text-color-brend;
@@ -21,6 +57,18 @@
     content: " ";
     background: @text-color-brend;
   }
+
+  &--name {
+    margin-bottom: 26px;
+  }
+
+  &--contact {
+    margin-bottom: 7px;
+  }
+
+  &--additionally {
+    margin-bottom: 22px;
+  }
 }
 
 .form__list {
@@ -29,8 +77,9 @@
 
 .form__item {
   position: relative;
-  margin-bottom: 12px;
+  margin-bottom: 23px;
   list-style: none;
+  border: none;
 
 
   & input[type="radio"],
@@ -46,12 +95,12 @@
   & input[type="checkbox"] + label::before,
   & input[type="radio"] + label::before {
     position: absolute;
-    top: -5px;
+    top: -8px;
     left: 0;
     content: "";
     display: block;
-    height: 35px;
-    width: 35px;
+    height: 38px;
+    width: 38px;
     border: 2px solid @text-color;
   }
 
@@ -69,10 +118,7 @@
   & input[type="radio"]:focus + label::before {
     border: 2px solid #c6c6c6;
   }
-  //
-  // & input[type="checkbox"] + label::before {
-  // }
-  //
+
   & input[type="radio"] + label::before {
     border-radius: 50%;
   }
@@ -86,7 +132,7 @@
 
   & input[type="radio"]:checked + label::after {
     position: absolute;
-    top: 7px;
+    top: 4px;
     left: 12px;
     content: "";
     display: block;
@@ -95,18 +141,6 @@
     background-color: @text-color-brend;
     border-radius: 50%;
   }
-  //
-  // & input[type="checkbox"]:disabled + label::before {
-  // }
-  //
-  // & input[type="checkbox"]:checked:disabled + label::before {
-  // }
-  //
-  // & input[type="radio"]:disabled + label::before {
-  // }
-  //
-  // & input[type="radio"]:checked:disabled + label::before {
-  // }​
 
   & input::placeholder,
   & textarea::placeholder {
@@ -115,62 +149,40 @@
     color: #d4d4d4;
     font-weight: normal;
   }
-}
 
-.form__item--color {
-  margin-bottom: 37px;
-}
-
-.form__wrapper--name {
-  margin-bottom: 34px;
-
-  & .form__title {
-    margin-bottom: 24px;
+  &--color {
+    margin-bottom: 43px;
   }
 
-  & .form__item {
-    padding: 0;
-    margin-bottom: 19px;
-
-    &:hover input,
-    & input:focus {
-      border-bottom: 2px solid @text-color-brend;
-    }
-  }
-
-  & .form__label--input {
-    width: 100%;
-  }
-
-  & input {
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 16px;
+  &--color input {
     border: none;
     font-size: 17px;
     line-height: 18px;
     border-bottom: 2px solid;
   }
-}
 
-.form__wrapper-contact {
-  margin-bottom: 0;
-
-  .form__title {
-    margin-bottom: 10px;
-  }
-
-  .form__item {
-    padding-left: 0;
-    margin-bottom: 0;
-
+  &--name {
     &:hover input,
     & input:focus {
       border-bottom: 2px solid @text-color-brend;
     }
+  }
 
-    & svg {
-      fill: #cccccc;
+  &--name label {
+    display: block;
+  }
+
+  &--name input {
+    width: 100%;
+    padding: 16px 0;
+    border: none;
+    border-bottom: 2px solid @text-color;
+  }
+
+  &--contact {
+    &:hover input,
+    & input:focus {
+      border-bottom: 2px solid @text-color-brend;
     }
 
     &:hover svg {
@@ -178,54 +190,13 @@
     }
   }
 
-  & input {
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 35px;
-    padding-bottom: 15px;
-    font-size: 17px;
-    line-height: 18px;
-    border: none;
-    border-bottom: 2px solid;
-  }
-}
-
-.form__label--phone,
-.form__label--email {
-  position: relative;
-  width: 100%;
-
-  & svg {
-    position: absolute;
-    top: 0;
-    right: 2px;
-  }
-}
-
-.form__wrapper--additionally {
-  margin-bottom: 10px;
-
-  .form__title {
-    margin-bottom: 19px;
-  }
-
-  & textarea {
-    width: 100%;
-    padding: 14px 17px;
-    font-size: 17px;
-    line-height: 18px;
-    // color: #d4d4d4;
-    font-weight: normal;
-    border: 2px solid;
-  }
-
-  &:hover textarea,
-  & textarea:focus {
-    border: 2px solid @text-color-brend;
+  &--contact svg {
+    fill: #cccccc;
   }
 }
 
 .form__label {
+  display: block;
   padding-left: 63px;
   font-size: 17px;
   line-height: 18px;
@@ -236,10 +207,21 @@
     line-height: 18px;
     font-weight: bold;
   }
+
+  &--phone,
+  &--email {
+    position: relative;
+
+    & svg {
+      position: absolute;
+      top: 0;
+      right: 2px;
+    }
+  }
 }
 
 .form__desc {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   font-size: 14px;
   line-height: 16px;
 }
@@ -253,112 +235,78 @@
 
     &--color {
       background: @body-bg-grey;
-      padding-top: 46px;
+      padding-top: 42px;
     }
 
     &--name {
-      padding-top: 46px;
+      padding-top: 22px;
+      padding-bottom: 10px;
+    }
+
+    &--contact {
+      flex-direction: column;
+      padding-top: 50px;
+      padding-bottom: 30px;
+      background-color: @body-bg-grey;
+    }
+
+    &--additionally {
+      padding-top: 48px;
+      padding-bottom: 55px;
+    }
+
+    &--additionally textarea {
+      width: auto;
+      flex-grow: 1;
+      font-size: 19px;
+      line-height: 18px;
     }
 
     &--submit {
       display: flex;
       flex-direction: row-reverse;
-    }
-  }
-
-  .form__wrapper--name {
-    & .form__item {
-      display: flex;
-      border: none;
-    }
-
-    & .form__label--input {
-      margin-right: 26px;
-      width: auto;
-      font-size: 19px;
-      line-height: 18px;
-    }
-
-    & input {
-      flex-grow: 2;
-      width: auto;
-      margin-top: 0;
-      padding-left: 15px;
-      padding-right: 15px;
-      padding-bottom: 13px;
-      border-bottom: 2px solid;
-      margin-bottom: 20px;
-      font-size: 19px;
-      line-height: 18px;
-    }
-  }
-
-  .form__wrapper-contact {
-    flex-direction: column;
-    padding-top: 60px;
-    padding-bottom: 10px;
-    background-color: @body-bg-grey;
-
-    & .form__item {
-      display: flex;
-      width: 100%;
+      justify-content: space-between;
       margin-bottom: 40px;
     }
-
-    & .form__title {
-      width: 220px;
-      margin: 0;
-    }
-
-    & input {
-      margin: 0;
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-bottom: 12px;
-      font-size: 19px;
-      line-height: 18px;
-      background-color: @body-bg-grey;
-    }
   }
 
-  .form__wrapper--additionally {
-    padding-top: 50px;
-    padding-bottom: 56px;
-
-    & .form__title {
-      width: 220px;
-    }
-
-    & textarea {
-      font-size: 19px;
-      line-height: 18px;
-    }
+  .form__wrapper--name input {
+    flex-grow: 2;
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 2px solid;
+    font-size: 19px;
+    line-height: 18px;
   }
 
-  .form__wrapper--submit {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 26px;
+  .form__wrapper--contact input {
+    font-size: 19px;
+    line-height: 18px;
+    background-color: @body-bg-grey;
   }
 
   .form__title {
     width: 25%;
-    margin-top: 18px;
 
     &::after {
       display: none;
     }
+
+    &--name {
+      padding-top: 18px;
+    }
   }
 
   .form__submit {
-    width: 230px;
+    max-width: 230px;
   }
 
   .form__desc {
     font-size: 17px;
     line-height: 30px;
     margin-top: 10px;
-    margin-bottom: 0;
+    margin-bottom: 22px;
   }
 
   .form__list {
@@ -372,14 +320,14 @@
   }
 
   .form__item {
-    margin-bottom: 52px;
+    margin-bottom: 60px;
 
     & input[type="checkbox"] + label::before,
     & input[type="radio"] + label::before {
       top: -13px;
       left: 0;
-      height: 47px;
-      width: 47px;
+      height: 50px;
+      width: 50px;
     }
 
     & input[type="checkbox"]:checked + label::before {
@@ -396,14 +344,42 @@
     &--color {
       width: 50%;
     }
+
+    &--name {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 21px;
+      border: none;
+    }
+
+    &--contact {
+      display: flex;
+      margin-bottom: 12px;
+    }
   }
 
   .form__label {
-    padding-left: 82px;
-  }
+    padding-left: 81px;
 
-  .form__label--phone {
-    width: 100%;
+    &--name {
+      margin-right: 25px;
+      font-size: 19px;
+      line-height: 18px;
+    }
+
+    &--contact {
+      flex-grow: 1;
+    }
+
+    &--contact input {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &--contact svg {
+      top: 14px;
+      right: 26px;
+    }
   }
 }
 
@@ -411,18 +387,40 @@
   .form__wrapper {
     display: flex;
     padding: 0 113px;
+
+    &--color {
+      padding-top: 43px;
+    }
+
+    &--name {
+      padding-top: 23px;
+      padding-right: 226px;
+      padding-bottom: 12px;
+    }
+
+    &--contact {
+      padding-top: 50px;
+      padding-right: 226px;
+      padding-bottom: 25px;
+    }
+
+    &--additionally {
+      padding-top: 50px;
+      padding-bottom: 53px;
+      padding-right: 226px;
+    }
+
+    &--submit {
+      padding: 0 224px;
+    }
   }
 
   .form__title {
-    width: 110px;
+    width: 114px;
   }
 
   .form__list {
     flex-grow: 2;
-  }
-
-  .form__wrapper--color {
-    padding-top: 46px;
   }
 
   .form__item {
@@ -432,33 +430,9 @@
     }
   }
 
-  .form__wrapper--name {
-    padding-top: 46px;
-    padding-right: 226px;
-  }
-
-  .form__wrapper-contact {
-    padding-top: 60px;
-    padding-bottom: 7px;
-    padding-right: 226px;
-
-    & .form__title {
-      width: 130px;
+  .form__label {
+    &--contact svg {
+      right: 2px;
     }
-  }
-
-  .form__wrapper--additionally {
-    padding-top: 50px;
-    padding-bottom: 55px;
-    padding-right: 226px;
-
-    & .form__title {
-      width: 130px;
-    }
-  }
-
-  .form__wrapper--submit {
-    padding: 0 224px;
-    padding-bottom: 36px;
   }
 }

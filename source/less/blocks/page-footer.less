@@ -4,13 +4,15 @@
   padding-top: 8px;
   padding-bottom: 10px;
   background-color: @body-bg-grey;
+}
 
-  & svg:hover {
+.page-footer svg {
+  &:hover {
     fill: @text-color-brend;
   }
 
-  & svg:active,
-  & svg:focus {
+  &:active,
+  &:focus {
     fill: @text-color-brend;
     opacity: 0.3;
   }
@@ -27,19 +29,19 @@
   text-decoration: none;
   color: @text-color;
 
-  &:hover svg {
-    fill: #45c1ae;
-  }
-
   &:active,
   &:focus {
     opacity: 0.3;
   }
+}
 
-  & svg {
-    margin-left: 24px;
-    fill: @text-color-brend;
-  }
+.page-footer__copyright svg {
+  margin-left: 24px;
+  fill: @text-color-brend;
+}
+
+.page-footer__copyright:hover svg {
+  fill: #45c1ae;
 }
 
 .page-footer__logo {
@@ -61,6 +63,3 @@
     display: block;
   }
 }
-//
-// @media (min-width: @desktop-width) {
-// }

@@ -1,18 +1,21 @@
 * {
   // outline: 1px dashed red;
+}
+
+html {
   box-sizing: border-box;
 }
 
-img {
-  vertical-align: bottom;
-  width: 100%;
-  height: auto;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
   margin: 0 auto;
   min-width: 320px;
-  width: 320px;
+  // width: 320px;
   font-family: @font-family-base;
   font-size: @font-size-base;
   line-height: @line-height-base;
@@ -20,16 +23,10 @@ body {
   background-color: @body-bg;
 }
 
-@media (min-width: @tablet-width) {
-  body {
-    width: @tablet-width;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  body {
-    width: @desktop-width;
-  }
+img {
+  vertical-align: bottom;
+  width: 100%;
+  height: auto;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -43,4 +40,18 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@media (min-width: @tablet-width) {
+  body {
+    // width: @tablet-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  body {
+    width: @desktop-width;
+    box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+    border: 1px solid #c6c6c6;
+  }
 }
