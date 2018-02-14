@@ -96,11 +96,19 @@
     display: none;
   }
 
+  .main-nav--nojs .main-nav__item {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__item--no-link {
+    display: none;
+  }
+
   .main-nav__list--promo {
     display: none;
   }
 
-  .main-nav__list--delivery {
+  .main-nav__item--delivery {
     order: 4;
   }
 }
@@ -166,14 +174,13 @@
     display: none;
   }
 
-  .main-nav__list--delivery {
+  .main-nav__item--delivery {
     order: 5;
     margin-left: auto;
   }
 
   .main-nav__item--no-link {
     display: block;
-    width: 100%;
     font-size: 15px;
     line-height: 24px;
     font-weight: normal;
@@ -217,11 +224,12 @@
 
   .main-nav__link--promo {
     padding: 20px 35px;
+    padding-right: 26px;
     font-size: 15px;
     line-height: 24px;
   }
 
-  .main-nav__list--delivery {
+  .main-nav__item--delivery {
     order: 5;
     margin-right: 35px;
   }

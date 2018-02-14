@@ -22,6 +22,7 @@
   line-height: 30px;
   font-weight: bold;
   text-align: center;
+  color: @title-color;
 }
 
 .features__list {
@@ -30,10 +31,10 @@
 
 .features__list li {
   list-style: none;
-  background-color: #63d1bb;
+  background-color: #58d5bc;
 
   &:nth-child(even) {
-    background-color: #55c3b2;
+    background-color: #58d5bc;
   }
 }
 
@@ -61,10 +62,21 @@
   &:active,
   &:focus {
     top: -5px;
+    background-color: #58d5bc;
+  }
+
+  &--toy:hover,
+  &--toy:active,
+  &--toy:focus {
+    background-color: #45c1ae;
   }
 
   &:hover svg {
     fill: #28a591;
+  }
+
+  &--toy:hover svg {
+    fill: #229f8d;
   }
 
   &:active,
@@ -76,6 +88,11 @@
   &:focus svg {
     fill: #43c0aa;
   }
+
+  &--toy:active svg,
+  &--toy:focus svg {
+    fill: #36b2a0;
+  }
 }
 
 .features__item p {
@@ -85,6 +102,10 @@
 
 .features__item svg {
   fill: #3bb09d;
+}
+
+.features__item--toy svg {
+  fill: #34a998;
 }
 
 
