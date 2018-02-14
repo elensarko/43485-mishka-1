@@ -1,14 +1,5 @@
 .product {
   border: 1px solid #ebebeb;
-
-  &:hover {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  &:active,
-  &:focus {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  }
 }
 
 .product__img {
@@ -20,14 +11,23 @@
 .product__wrapper {
   padding-left: 30px;
   padding-right: 30px;
-  padding-bottom: 6px;
+  padding-bottom: 8px;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .product__title {
   margin-bottom: 5px;
   font-size: 17px;
   font-weight: bold;
-  color: @text-color;
+  color: @title-color;
   text-decoration: none;
 
   &:hover {
@@ -54,6 +54,7 @@
   padding-bottom: 20px;
   margin-bottom: 0;
   font-weight: bold;
+  color: @title-color;
   border-top: 1px solid #ebebeb;
 }
 
@@ -109,6 +110,10 @@
 
   .product__price {
     margin-top: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 17px;
+    line-height: 24px;
   }
 }
 
@@ -134,6 +139,7 @@
   }
 
   .product__price {
+    padding-left: 0;
     font-size: 17px;
     line-height: 24px;
     margin-top: auto;

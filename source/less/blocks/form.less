@@ -9,32 +9,12 @@
     margin-bottom: 21px;
   }
 
-  &--contact input {
-    width: 100%;
-    padding: 15px 0;
-    margin-bottom: 10px;
-    font-size: 17px;
-    line-height: 18px;
-    border: none;
-    border-bottom: 2px solid;
-  }
-
   &--additionally {
     margin-bottom: 10px;
 
-    &:hover textarea,
-    & textarea:focus {
+    &:hover textarea {
       border: 2px solid @text-color-brend;
     }
-  }
-
-  &--additionally textarea {
-    width: 100%;
-    padding: 14px 17px;
-    font-size: 17px;
-    line-height: 18px;
-    font-weight: normal;
-    border: 2px solid;
   }
 }
 
@@ -63,7 +43,7 @@
   }
 
   &--contact {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
   }
 
   &--additionally {
@@ -77,78 +57,9 @@
 
 .form__item {
   position: relative;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
   list-style: none;
   border: none;
-
-
-  & input[type="radio"],
-  & input[type="checkbox"] {
-    display: none;
-  }
-
-  & input[type="checkbox"] + label,
-  & input[type="radio"] + label {
-    cursor: pointer;
-  }
-
-  & input[type="checkbox"] + label::before,
-  & input[type="radio"] + label::before {
-    position: absolute;
-    top: -8px;
-    left: 0;
-    content: "";
-    display: block;
-    height: 38px;
-    width: 38px;
-    border: 2px solid @text-color;
-  }
-
-  & input[type="checkbox"]:hover + label::before,
-  & input[type="radio"]:hover + label::before {
-    border: 2px solid @text-color-brend;
-  }
-
-  & input[type="checkbox"]:active + label::before,
-  & input[type="radio"]:active + label::before {
-    border: 2px solid #c6c6c6;
-  }
-
-  & input[type="checkbox"]:focus + label::before,
-  & input[type="radio"]:focus + label::before {
-    border: 2px solid #c6c6c6;
-  }
-
-  & input[type="radio"] + label::before {
-    border-radius: 50%;
-  }
-
-  & input[type="checkbox"]:checked + label::before {
-    background-image: url("../img/icon-tick.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 25px;
-  }
-
-  & input[type="radio"]:checked + label::after {
-    position: absolute;
-    top: 4px;
-    left: 12px;
-    content: "";
-    display: block;
-    height: 15px;
-    width: 15px;
-    background-color: @text-color-brend;
-    border-radius: 50%;
-  }
-
-  & input::placeholder,
-  & textarea::placeholder {
-    font-size: 17px;
-    line-height: 18px;
-    color: #d4d4d4;
-    font-weight: normal;
-  }
 
   &--color {
     margin-bottom: 43px;
@@ -162,37 +73,103 @@
   }
 
   &--name {
-    &:hover input,
-    & input:focus {
+    &:hover input {
       border-bottom: 2px solid @text-color-brend;
     }
   }
+}
 
-  &--name label {
-    display: block;
+.form__item--contact {
+  position: relative;
+  color: @text-color-brend;
+
+  &:hover input {
+    border-bottom: 2px solid @text-color-brend;
   }
 
-  &--name input {
-    width: 100%;
-    padding: 16px 0;
-    border: none;
-    border-bottom: 2px solid @text-color;
+  &:hover svg {
+    fill: @text-color-brend;
   }
+}
 
-  &--contact {
-    &:hover input,
-    & input:focus {
-      border-bottom: 2px solid @text-color-brend;
-    }
+.form__item--contact svg {
+  position: absolute;
+  bottom: 23px;
+  right: 2px;
+  fill: #cccccc;
+}
 
-    &:hover svg {
-      fill: @text-color-brend;
-    }
-  }
+.form__item--contact input:focus {
+  border-bottom: 2px solid @text-color-brend;
+}
 
-  &--contact svg {
-    fill: #cccccc;
-  }
+.form__checkbox:focus,
+.form__radiobutton:focus {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.form__checkbox + label,
+.form__radiobutton + label {
+  cursor: pointer;
+}
+
+.form__checkbox + label::before,
+.form__radiobutton + label::before {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  content: "";
+  display: block;
+  height: 38px;
+  width: 38px;
+  border: 2px solid @text-color;
+}
+
+.form__checkbox:hover + label::before,
+.form__radiobutton:hover + label::before {
+  border: 2px solid @text-color-brend;
+}
+
+.form__checkbox:active + label::before,
+.form__radiobutton:active + label::before {
+  border: 2px solid #c6c6c6;
+}
+
+.form__checkbox:focus + label::before,
+.form__radiobutton:focus + label::before {
+  border: 2px solid @text-color-brend;
+}
+
+.form__radiobutton + label::before {
+  border-radius: 50%;
+}
+
+.form__checkbox:checked + label::before {
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px;
+}
+
+.form__radiobutton:checked + label::after {
+  position: absolute;
+  top: 4px;
+  left: 12px;
+  content: "";
+  display: block;
+  height: 15px;
+  width: 15px;
+  background-color: @text-color-brend;
+  border-radius: 50%;
 }
 
 .form__label {
@@ -201,6 +178,7 @@
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
+  color: @title-color;
 
   &--input {
     font-size: 17px;
@@ -208,22 +186,86 @@
     font-weight: bold;
   }
 
+  &--name,
+  &--contact,
+  &--additionally {
+    padding: 0;
+  }
+
   &--phone,
   &--email {
     position: relative;
+    color: @text-color-brend;
+  }
 
-    & svg {
-      position: absolute;
-      top: 0;
-      right: 2px;
-    }
+  &--contact svg {
+    position: absolute;
+    top: 0;
+    right: 2px;
+  }
+
+  &--additionally {
+    color: @text-color-brend;
   }
 }
 
+.form__input::placeholder,
+.form__textarea::placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  color: #d4d4d4;
+  font-weight: normal;
+}
+
+.form__input {
+  min-height: 52px;
+  font-family: @font-family-base;
+  font-size: 19px;
+  line-height: 18px;
+  color: rgb(68, 68, 68);
+  border: none;
+  border-bottom: 2px solid @text-color;
+
+  &--name {
+    width: 100%;
+    padding: 12px 0;
+
+    &:focus {
+      border-bottom: 2px solid @text-color-brend;
+    }
+  }
+
+  &--contact {
+    width: 100%;
+    padding: 15px 0;
+    padding-right: 40px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 18px;
+  }
+}
+
+.form__textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 17px;
+  line-height: 18px;
+  font-family: @font-family-base;
+  color: @text-color;
+  font-weight: normal;
+  border: 2px solid;
+  vertical-align: bottom;
+}
+
 .form__desc {
-  margin-bottom: 28px;
+  margin-top: 17px;
+  margin-bottom: 31px;
   font-size: 14px;
   line-height: 16px;
+}
+
+.form__submit {
+  background: #ffffff;
 }
 
 @media (min-width: @tablet-width) {
@@ -239,20 +281,20 @@
     }
 
     &--name {
-      padding-top: 22px;
-      padding-bottom: 10px;
+      padding-top: 34px;
+      padding-bottom: 12px;
     }
 
     &--contact {
       flex-direction: column;
-      padding-top: 50px;
+      padding-top: 44px;
       padding-bottom: 30px;
       background-color: @body-bg-grey;
     }
 
     &--additionally {
-      padding-top: 48px;
-      padding-bottom: 55px;
+      padding-top: 52px;
+      padding-bottom: 53px;
     }
 
     &--additionally textarea {
@@ -266,6 +308,7 @@
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
+      align-items: center;
       margin-bottom: 40px;
     }
   }
@@ -294,7 +337,7 @@
     }
 
     &--name {
-      padding-top: 18px;
+      padding-top: 15px;
     }
   }
 
@@ -307,6 +350,7 @@
     line-height: 30px;
     margin-top: 10px;
     margin-bottom: 22px;
+    margin-left: 30px;
   }
 
   .form__list {
@@ -316,59 +360,76 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      margin-bottom: 11px;
     }
   }
 
   .form__item {
-    margin-bottom: 60px;
-
-    & input[type="checkbox"] + label::before,
-    & input[type="radio"] + label::before {
-      top: -13px;
-      left: 0;
-      height: 50px;
-      width: 50px;
-    }
-
-    & input[type="checkbox"]:checked + label::before {
-      background-size: 25px;
-    }
-
-    & input[type="radio"]:checked + label::after {
-      top: 2px;
-      left: 16px;
-      height: 20px;
-      width: 20px;
-    }
+    margin-bottom: 59px;
 
     &--color {
-      width: 50%;
+      width: 45%;
+      margin-right: 37px;
+
+      &:nth-of-type(even) {
+        margin-right: 0;
+      }
     }
 
     &--name {
       display: flex;
       align-items: baseline;
-      margin-bottom: 21px;
+      margin-bottom: 24px;
       border: none;
     }
 
     &--contact {
       display: flex;
-      margin-bottom: 12px;
+      align-items: baseline;
+      margin-bottom: 8px;
     }
+
+    &--contact svg {
+      top: 14px;
+      right: 26px;
+    }
+  }
+
+  .form__checkbox + label::before,
+  .form__radiobutton + label::before {
+    top: -14px;
+    left: 0;
+    height: 52px;
+    width: 52px;
+  }
+
+  .form__checkbox:checked + label::before {
+    background-size: 37px;
+  }
+
+  .form__radiobutton:checked + label::after {
+    top: 2px;
+    left: 16px;
+    height: 20px;
+    width: 20px;
   }
 
   .form__label {
     padding-left: 81px;
+    font-size: 19px;
+    line-height: 18px;
 
     &--name {
       margin-right: 25px;
       font-size: 19px;
       line-height: 18px;
+      padding-left: 0;
     }
 
     &--contact {
-      flex-grow: 1;
+      padding-left: 0;
+      font-size: 17px;
+      line-height: 16px;
     }
 
     &--contact input {
@@ -376,9 +437,21 @@
       padding-right: 15px;
     }
 
-    &--contact svg {
-      top: 14px;
-      right: 26px;
+    &--additionally {
+      padding-top: 17px;
+      padding-left: 0;
+      font-size: 17px;
+      line-height: 16px;
+    }
+  }
+
+  .form__input {
+    &--contact {
+      flex-grow: 1;
+      width: auto;
+      min-height: 58px;
+      padding-left: 17px;
+      padding-right: 60px;
     }
   }
 }
@@ -393,20 +466,20 @@
     }
 
     &--name {
-      padding-top: 23px;
+      padding-top: 35px;
       padding-right: 226px;
       padding-bottom: 12px;
     }
 
     &--contact {
-      padding-top: 50px;
+      padding-top: 43px;
       padding-right: 226px;
-      padding-bottom: 25px;
+      padding-bottom: 32px;
     }
 
     &--additionally {
       padding-top: 50px;
-      padding-bottom: 53px;
+      padding-bottom: 49px;
       padding-right: 226px;
     }
 
@@ -427,6 +500,15 @@
     &--color {
       width: 30%;
       margin-right: 2.4%;
+
+      &:nth-of-type(even) {
+        margin-right: 2.4%;
+      }
+    }
+
+    &--contact svg {
+      top: 17px;
+      right: 3px;
     }
   }
 

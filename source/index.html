@@ -4,9 +4,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="stylesheet" href="css/style.min.css" >
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="js/app.js" as="script">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   </head>
   <body>
 
@@ -29,7 +33,7 @@
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__item--catalog" href="catalog.html">Каталог товаров</a>
+            <a class="main-nav__link main-nav__link--catalog" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">Вязание на заказ</a>
@@ -38,16 +42,16 @@
         <ul class="main-nav__list main-nav__list--user">
           <li class="main-nav__item main-nav__item--user main-nav__item--search">
             <a class="main-nav__link main-nav__link--user" href="#">
-              <svg class="main-nav__icon main-nav__icon--search" width="17.6px" height="17.6px">
-                <use xlink:href="#icon-search"></use>
+              <svg class="main-nav__icon main-nav__icon--search" width="17.6" height="17.6">
+                <use xlink:href="#sprite-icon-search"></use>
               </svg>
               Поиск по сайту
             </a>
           </li>
           <li class="main-nav__item main-nav__item--user">
             <a class="main-nav__link main-nav__link--user" href="#">
-              <svg class="main-nav__icon main-nav__icon--cart" width="20.294px" height="18.849px">
-                <use xlink:href="#icon-cart"></use>
+              <svg class="main-nav__icon main-nav__icon--cart" width="20.294" height="18.849">
+                <use xlink:href="#sprite-icon-cart"></use>
               </svg>
               Корзина: <span>пока пуста</span>
             </a>
@@ -61,13 +65,9 @@
             <a class="main-nav__link main-nav__link--promo" href="#">Распродажа</a>
           </li>
         </ul>
-        <ul class="main-nav__list main-nav__list--delivery">
-          <li class="main-nav__item main-nav__item--no-link">
-            <p>
-              Бесплатная доставка по России
-            </p>
-          </li>
-        </ul>
+        <p class="main-nav__item main-nav__item--no-link main-nav__item--delivery">
+          Бесплатная доставка по России
+        </p>
       </nav>
     </header>
 
@@ -85,8 +85,8 @@
               <p>
                 Предметы интерьера
               </p>
-              <svg class="features__icon features__icon--subject" width="40.219px" height="62.411px">
-                <use xlink:href="#icon-interior"></use>
+              <svg class="features__icon features__icon--subject" width="40.219" height="62.411">
+                <use xlink:href="#sprite-icon-interior"></use>
               </svg>
             </a>
           </li>
@@ -95,8 +95,8 @@
               <p>
                 Детские игрушки
               </p>
-              <svg class="features__icon features__icon--toy" width="60px" height="59.62px">
-                <use xlink:href="#icon-toy"></use>
+              <svg class="features__icon features__icon--toy" width="60" height="59.62">
+                <use xlink:href="#sprite-icon-toy"></use>
               </svg>
             </a>
           </li>
@@ -239,7 +239,7 @@
           </table>
         </div>
         <div class="contacts__map">
-          <iframe class="contacts__map" title="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123961!2d30.320894616039354!3d59.93879686904795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2s!4v1504585881965"  allowfullscreen></iframe>
+          <iframe title="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123961!2d30.320894616039354!3d59.93879686904795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2s!4v1504585881965"  allowfullscreen></iframe>
         </div>
         <div class="contacts__wrapper">
           <a class="contacts__write-us btn" href="#">Напишите нам</a>
@@ -249,33 +249,32 @@
     </main>
 
     <footer class="page-footer">
-      <a class="page-footer__logo">
-        <svg width="101.615px" height="34.056px">
-          <use xlink:href="#logo-footer"></use>
+      <a class="page-footer__logo" aria-label="Интернет магазин "Мишка"">
+        <svg width="101.615" height="34.056">
+          <use xlink:href="#sprite-logo-footer"></use>
         </svg>
-
       </a>
       <ul class="page-footer__social social-list">
         <li class="social-list__item  social-link  social-link--in">
           <a href="#">
-            <svg width="21.769px" height="21.334px">
-              <use xlink:href="#icon-insta"></use>
+            <svg width="21.769" height="21.334">
+              <use xlink:href="#sprite-icon-insta"></use>
             </svg>
             Мы в Инстаграме
           </a>
         </li>
         <li class="social-list__item  social-link  social-link--fb">
           <a href="#">
-            <svg width="14.962px" height="27.718px">
-              <use xlink:href="#icon-fb"></use>
+            <svg width="14.962" height="27.718">
+              <use xlink:href="#sprite-icon-fb"></use>
             </svg>
             Мы в Файсбуке
           </a>
         </li>
         <li class="social-list__item  social-link  social-link--tw">
           <a href="#">
-            <svg width="23.494px" height="20.168px">
-              <use xlink:href="#icon-twitter"></use>
+            <svg width="23.494" height="20.168">
+              <use xlink:href="#sprite-icon-twitter"></use>
             </svg>
             Мы в Твиттере
           </a>
@@ -285,8 +284,9 @@
         <p>
           Разработано
         </p>
-        <svg width="26.943px" height="34.09px">
-          <use xlink:href="#logo-htmlacademy"></use>
+        <svg width="26.943" height="34.09" rol="img">
+          <title>HTMLacademy</title>
+          <use xlink:href="#sprite-logo-htmlacademy"></use>
         </svg>
       </a>
     </footer>
@@ -297,19 +297,19 @@
         <p class="modal__text">Выберите размер:</p>
         <ul class="modal__list">
           <li class="modal__item">
-            <input class="modal__radiobutton" type="radio" name="type" value="S" id="s-size" checked>
+            <input class="modal__radiobutton visually-hidden" type="radio" name="type" value="S" id="s-size" checked>
             <label class="modal__label" for="s-size">
               S
             </label>
           </li>
           <li class="modal__item">
-            <input class="modal__radiobutton" type="radio" name="type" value="M" id="m-size">
+            <input class="modal__radiobutton visually-hidden" type="radio" name="type" value="M" id="m-size">
             <label class="modal__label" for="m-size">
               M
             </label>
           </li>
           <li class="modal__item">
-            <input class="modal__radiobutton" type="radio" name="type" value="L" id="l-size">
+            <input class="modal__radiobutton visually-hidden" type="radio" name="type" value="L" id="l-size">
             <label class="modal__label" for="l-size">
               L
             </label>
@@ -318,9 +318,9 @@
         <input class="modal__btn btn" type="submit" value="Добавить" name="send_form">
       </form>
     </div>
-    <div class="modal__overlay"></div>
+    <div class="modal-overlay"></div>
 
-    <script src="../js/app.js"></script>
+    <script src="js/app.js"></script>
 
   </body>
 </html>
