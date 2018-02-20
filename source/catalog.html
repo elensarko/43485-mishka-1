@@ -11,6 +11,36 @@
     <link rel="preload" href="js/app.js" as="script">
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* По умолчанию мобильный макет */
+    background-image: url( "img/mishka-catalog-mobile.jpg" );
+  }
+  /* Планшет */
+  @media ( min-width: 768px ) {
+    HTML {
+      /* Планшетный макет */
+      background-image: url( "img/mishka-catalog-tablet.jpg" );
+    }
+  }
+  /* Десктоп */
+  @media ( min-width: 1150px ) {
+    html {
+      /* Десктопный макет */
+      background-image: url( "img/mishka-catalog-desktop.jpg" );
+    }
+  }
+
+  BODY {
+    opacity: .5;
+  }
+</style>
+<link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+<script src="../node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
   </head>
 
   <body>
@@ -174,73 +204,77 @@
       </section>
 
       <section class="process">
-        <h2 class="process__title">
-          <svg width="32" height="32">
-            <use xlink:href="#sprite-icon-video"></use>
-          </svg>
-          Процесс производства
-        </h2>
-        <div class="process__video">
-          <picture>
-            <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
-            <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-            <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Процесс производства">
-          </picture>
-        </div>
         <div class="process__wrapper">
-          <p class="process__text">
-            По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-          </p>
-          <a class="process__order btn">Сделать заказ</a>
+          <h2 class="process__title">
+            <svg width="32" height="32">
+              <use xlink:href="#sprite-icon-video"></use>
+            </svg>
+            Процесс производства
+          </h2>
+          <div class="process__video">
+            <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Процесс производства">
+            </picture>
+          </div>
+          <div class="process__inner">
+            <p class="process__text">
+              По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+            </p>
+            <a class="process__order btn">Сделать заказ</a>
+          </div>
         </div>
       </section>
 
     </main>
 
     <footer class="page-footer">
-      <a class="page-footer__logo" href="index.html" aria-label="Интернет магазин "Мишка"">
-        <svg width="101.615" height="34.056">
-          <use xlink:href="#sprite-logo-footer"></use>
-        </svg>
-      </a>
-      <ul class="page-footer__social social-list">
-        <li class="social-list__item  social-link  social-link--in">
-          <a class="" href="#">
-            <svg width="21.769" height="21.334">
-              <use xlink:href="#sprite-icon-insta"></use>
-            </svg>
-            Мы в Инстаграме
-          </a>
-        </li>
-        <li class="social-list__item  social-link  social-link--fb">
-          <a class=" " href="#">
-            <svg width="14.962" height="27.718">
-              <use xlink:href="#sprite-icon-fb"></use>
-            </svg>
-            Мы в Файсбуке
-          </a>
-        </li>
-        <li class="social-list__item  social-link  social-link--tw">
-          <a class="" href="#">
-            <svg width="23.494" height="20.168">
-              <use xlink:href="#sprite-icon-twitter"></use>
-            </svg>
-            Мы в Твиттере
-          </a>
-        </li>
-      </ul>
-      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
-        <p>
-          Разработано
-        </p>
-        <svg width="26.943" height="34.09" rol="img">
-          <title>HTMLacademy</title>
-          <use xlink:href="#sprite-logo-htmlacademy"></use>
-        </svg>
-      </a>
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo" href="index.html" aria-label="Интернет магазин "Мишка"">
+          <svg width="101.615" height="34.056">
+            <use xlink:href="#sprite-logo-footer"></use>
+          </svg>
+        </a>
+        <ul class="page-footer__social social-list">
+          <li class="social-list__item  social-link  social-link--in">
+            <a class="" href="#">
+              <svg width="21.769" height="21.334">
+                <use xlink:href="#sprite-icon-insta"></use>
+              </svg>
+              Мы в Инстаграме
+            </a>
+          </li>
+          <li class="social-list__item  social-link  social-link--fb">
+            <a class=" " href="#">
+              <svg width="14.962" height="27.718">
+                <use xlink:href="#sprite-icon-fb"></use>
+              </svg>
+              Мы в Файсбуке
+            </a>
+          </li>
+          <li class="social-list__item  social-link  social-link--tw">
+            <a class="" href="#">
+              <svg width="23.494" height="20.168">
+                <use xlink:href="#sprite-icon-twitter"></use>
+              </svg>
+              Мы в Твиттере
+            </a>
+          </li>
+        </ul>
+        <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <p>
+            Разработано
+          </p>
+          <svg width="26.943" height="34.09" rol="img">
+            <title>HTMLacademy</title>
+            <use xlink:href="#sprite-logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
     </footer>
 
     <div class="modal">
@@ -273,6 +307,7 @@
     <div class="modal-overlay"></div>
 
     <script src="js/app.js"></script>
+    <script src="js/picturefill.js"></script>
 
   </body>
 

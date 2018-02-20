@@ -103,8 +103,12 @@
   border-bottom: 2px solid @text-color-brend;
 }
 
+.form__checkbox:hover,
+.form__radiobutton:hover,
 .form__checkbox:focus,
-.form__radiobutton:focus {
+.form__radiobutton:focus,
+.form__checkbox:active,
+.form__radiobutton:active {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -218,7 +222,7 @@
 }
 
 .form__input {
-  min-height: 52px;
+  height: 52px;
   font-family: @font-family-base;
   font-size: 19px;
   line-height: 18px;
@@ -247,6 +251,7 @@
 
 .form__textarea {
   width: 100%;
+  height: 142px;
   padding: 15px;
   font-size: 17px;
   line-height: 18px;

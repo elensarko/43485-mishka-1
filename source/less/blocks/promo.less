@@ -38,6 +38,9 @@
   color: @text-color-brend;
   font-weight: bold;
   text-transform: uppercase;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: keep-all;
 }
 
 .promo__desc {
@@ -151,6 +154,8 @@
 
 @media (min-width: @desktop-width) {
   .promo {
+    width: @desktop-width;
+    margin: 0 auto;
     padding-top: 48px;
     padding-bottom: 58px;
 
@@ -169,6 +174,7 @@
     justify-content: flex-start;
     z-index: 1;
     margin-top: 58px;
+    margin-bottom: 21px;
   }
 
   .promo__title {

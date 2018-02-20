@@ -9,8 +9,40 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="preload" href="js/app.js" as="script">
+    <link rel="preload" href="js/picturefill.js" as="script">
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+
+    <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* По умолчанию мобильный макет */
+    background-image: url( "img/mishka-index-mobile.jpg" );
+  }
+  /* Планшет */
+  @media ( min-width: 768px ) {
+    HTML {
+      /* Планшетный макет */
+      background-image: url( "img/mishka-index-tablet.jpg" );
+    }
+  }
+  /* Десктоп */
+  @media ( min-width: 1150px ) {
+    HTML {
+      /* Десктопный макет */
+      background-image: url( "img/mishka-index-desktop.jpg" );
+    }
+  }
+
+  BODY {
+    opacity: .5;
+  }
+</style>
+<link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+<script src="../node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
   </head>
   <body>
 
@@ -76,31 +108,33 @@
       <h1 class="visually-hidden">Интернет магазин "Мишка"</h1>
 
       <section class="features">
-        <h2 class="features__title">
-          Милые штуки ручной работы&nbsp;для&nbsp;дома
-        </h2>
-        <ul class="features__list">
-          <li>
-            <a class="features__item features__item--subject" href="#">
-              <p>
-                Предметы интерьера
-              </p>
-              <svg class="features__icon features__icon--subject" width="40.219" height="62.411">
-                <use xlink:href="#sprite-icon-interior"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a class="features__item features__item--toys" href="#">
-              <p>
-                Детские игрушки
-              </p>
-              <svg class="features__icon features__icon--toy" width="60" height="59.62">
-                <use xlink:href="#sprite-icon-toy"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="features__wrapper">
+          <h2 class="features__title">
+            Милые штуки ручной работы&nbsp;для&nbsp;дома
+          </h2>
+          <ul class="features__list">
+            <li>
+              <a class="features__item features__item--subject" href="#">
+                <p>
+                  Предметы интерьера
+                </p>
+                <svg class="features__icon features__icon--subject" width="40.219" height="62.411">
+                  <use xlink:href="#sprite-icon-interior"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="features__item features__item--toys" href="#">
+                <p>
+                  Детские игрушки
+                </p>
+                <svg class="features__icon features__icon--toy" width="60" height="59.62">
+                  <use xlink:href="#sprite-icon-toy"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="promo">
@@ -188,107 +222,113 @@
       </section>
 
       <section class="reviews">
-        <h4 class="reviews__title">Отзывы</h4>
-        <div class="reviews__wrapper slider">
-          <input class="slider__input" type="radio" name="reviews" id="reviews-input-1" checked>
-          <input class="slider__input" type="radio" name="reviews" id="reviews-input-2">
-          <input class="slider__input" type="radio" name="reviews" id="reviews-input-3">
-          <div class="reviews__list slider__list">
-            <blockquote class="reviews__item  slider__item">
-              <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-              <div class="reviews__autor-wrapper">
-                <p class="reviews__auhor-name">
-                  Анастасия Красильникова
-                </p>
-                <p class="reviews__auhor-nickname">
-                  @misssssiskras
-                </p>
-              </div>
-            </blockquote>
+        <div class="reviews__wrapper">
+          <h4 class="reviews__title">Отзывы</h4>
+          <div class="reviews__inner slider">
+            <input class="slider__input" type="radio" name="reviews" id="reviews-input-1" checked>
+            <input class="slider__input" type="radio" name="reviews" id="reviews-input-2">
+            <input class="slider__input" type="radio" name="reviews" id="reviews-input-3">
+            <div class="reviews__list slider__list">
+              <blockquote class="reviews__item  slider__item">
+                <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                <div class="reviews__autor-wrapper">
+                  <p class="reviews__auhor-name">
+                    Анастасия Красильникова
+                  </p>
+                  <p class="reviews__auhor-nickname">
+                    @misssssiskras
+                  </p>
+                </div>
+              </blockquote>
+            </div>
+            <div class="slider__btn-wrapper">
+              <button class="slider__btn slider__btn--prev" type="button">Предыдущий отзыв</button>
+              <button class="slider__btn slider__btn--next" type="button">Следующий отзыв</button>
+            </div>
           </div>
-          <div class="slider__btn-wrapper">
-            <button class="slider__btn slider__btn--prev" type="button">Предыдущий отзыв</button>
-            <button class="slider__btn slider__btn--next" type="button">Следующий отзыв</button>
-          </div>
+          <a class="reviews__write btn" href="reviews.html">Написать</a>
         </div>
-        <a class="reviews__write btn" href="#">Написать</a>
       </section>
 
       <section class="contacts">
-        <h3 class="contacts__title">
-          Контакты
-        </h3>
-        <div class="contacts__wrapper">
-          <table class="contacts__table">
-            <tr class="contacts__email">
-              <td class="contacts__field">e-mail:</td>
-              <td class="contacts__value">
-                <a href="mailto:info@mimimishkashop.ru">
-                  info@mimimishkashop.ru
-                </a>
-              </td>
-            </tr>
-            <tr class="contacts__adress">
-              <td class="contacts__field">адрес:</td>
-              <td class="contacts__value">
-                г. Санкт-Петербург,<br />
-                ул. Большая Конюшенная,<br />
-                д. 19/8, офис 101
-              </td>
-            </tr>
-          </table>
+        <div class="contacts__inner">
+          <h3 class="contacts__title">
+            Контакты
+          </h3>
+          <!-- <div class="contacts__wrapper"> -->
+            <table class="contacts__table">
+              <tr class="contacts__email">
+                <td class="contacts__field">e-mail:</td>
+                <td class="contacts__value">
+                  <a href="mailto:info@mimimishkashop.ru">
+                    info@mimimishkashop.ru
+                  </a>
+                </td>
+              </tr>
+              <tr class="contacts__adress">
+                <td class="contacts__field">адрес:</td>
+                <td class="contacts__value">
+                  г. Санкт-Петербург,<br />
+                  ул. Большая Конюшенная,<br />
+                  д. 19/8, офис 101
+                </td>
+              </tr>
+            </table>
+          <!-- </div> -->
         </div>
         <div class="contacts__map">
           <iframe title="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123961!2d30.320894616039354!3d59.93879686904795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2s!4v1504585881965"  allowfullscreen></iframe>
         </div>
         <div class="contacts__wrapper">
-          <a class="contacts__write-us btn" href="#">Напишите нам</a>
+          <a class="contacts__write-us btn" href="feedback.html">Напишите нам</a>
         </div>
       </section>
 
     </main>
 
     <footer class="page-footer">
-      <a class="page-footer__logo" aria-label="Интернет магазин "Мишка"">
-        <svg width="101.615" height="34.056">
-          <use xlink:href="#sprite-logo-footer"></use>
-        </svg>
-      </a>
-      <ul class="page-footer__social social-list">
-        <li class="social-list__item  social-link  social-link--in">
-          <a href="#">
-            <svg width="21.769" height="21.334">
-              <use xlink:href="#sprite-icon-insta"></use>
-            </svg>
-            Мы в Инстаграме
-          </a>
-        </li>
-        <li class="social-list__item  social-link  social-link--fb">
-          <a href="#">
-            <svg width="14.962" height="27.718">
-              <use xlink:href="#sprite-icon-fb"></use>
-            </svg>
-            Мы в Файсбуке
-          </a>
-        </li>
-        <li class="social-list__item  social-link  social-link--tw">
-          <a href="#">
-            <svg width="23.494" height="20.168">
-              <use xlink:href="#sprite-icon-twitter"></use>
-            </svg>
-            Мы в Твиттере
-          </a>
-        </li>
-      </ul>
-      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
-        <p>
-          Разработано
-        </p>
-        <svg width="26.943" height="34.09" rol="img">
-          <title>HTMLacademy</title>
-          <use xlink:href="#sprite-logo-htmlacademy"></use>
-        </svg>
-      </a>
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo" aria-label="Интернет магазин "Мишка"">
+          <svg width="101.615" height="34.056">
+            <use xlink:href="#sprite-logo-footer"></use>
+          </svg>
+        </a>
+        <ul class="page-footer__social social-list">
+          <li class="social-list__item  social-link  social-link--in">
+            <a href="#">
+              <svg width="21.769" height="21.334">
+                <use xlink:href="#sprite-icon-insta"></use>
+              </svg>
+              Мы в Инстаграме
+            </a>
+          </li>
+          <li class="social-list__item  social-link  social-link--fb">
+            <a href="#">
+              <svg width="14.962" height="27.718">
+                <use xlink:href="#sprite-icon-fb"></use>
+              </svg>
+              Мы в Файсбуке
+            </a>
+          </li>
+          <li class="social-list__item  social-link  social-link--tw">
+            <a href="#">
+              <svg width="23.494" height="20.168">
+                <use xlink:href="#sprite-icon-twitter"></use>
+              </svg>
+              Мы в Твиттере
+            </a>
+          </li>
+        </ul>
+        <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <p>
+            Разработано
+          </p>
+          <svg width="26.943" height="34.09" rol="img">
+            <title>HTMLacademy</title>
+            <use xlink:href="#sprite-logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
     </footer>
 
     <div class="modal">
@@ -321,6 +361,7 @@
     <div class="modal-overlay"></div>
 
     <script src="js/app.js"></script>
+    <script src="js/picturefill.js"></script>
 
   </body>
 </html>
